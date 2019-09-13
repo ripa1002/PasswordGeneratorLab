@@ -19,3 +19,5 @@ Goal for the time- and space complexity of these algrithms is O(n).
 Sources:https://searchsecurity.techtarget.com/definition/MD5
 	https://en.wikipedia.org/wiki/SHA-1
 	https://en.wikipedia.org/wiki/Base64
+
+Link to documentation folder: https://github.com/ripa1002/PasswordGeneratorLab/tree/master/documentation
