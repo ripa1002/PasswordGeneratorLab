@@ -9,12 +9,10 @@ public class Generator {
         String mac = "01-23-45-67-89-AB";
         String hashable = saltString + mac;
         
-        MD5 hashableMD5 = new MD5(hashable);
-        
+        MD5 hashableMD5 = new MD5(hashable);  
         SHA1 hashableSHA1 = new SHA1(hashable);
         
         Base64alg encodedHash = new Base64alg(hashableMD5.hash());
-        
         Base64alg encodedHash2 = new Base64alg(hashableSHA1.hash());
         
         //Printing encoded MD5 hash
