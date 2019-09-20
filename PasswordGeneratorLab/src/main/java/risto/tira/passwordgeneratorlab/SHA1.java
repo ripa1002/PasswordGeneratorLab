@@ -3,7 +3,10 @@ package risto.tira.passwordgeneratorlab;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import javax.xml.bind.DatatypeConverter;
-
+/**
+ * Class that handles the SHA1 algorithm.
+ * @author rsutinen
+ */
 public class SHA1 {
     private String inputString;
     

@@ -3,7 +3,10 @@ package risto.tira.passwordgeneratorlab;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import javax.xml.bind.DatatypeConverter;
-
+/**
+ * Class that handles the MD5 algorithm.
+ * @author rsutinen
+ */
 public class MD5 {
     private String inputString;
     
