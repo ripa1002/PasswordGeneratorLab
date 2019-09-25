@@ -7,16 +7,17 @@ package risto.tira.passwordgeneratorlab;
 public class MD5 {
     private byte[] inputString;
     
-    //message digest values initialised
+    //variables initialized(32-bit words)
     private static int AINIT = 0x67452301;
     private static int BINIT = (int) 0xEFCDAB89L;
     private static int CINIT = (int) 0x98BADCFEL;
     private static int DINIT = 0x10325476;
     
-    //16 words, 32-bit each
+    //blocks table
     private static int[] SHIFT = {7, 12, 17, 22, 5, 9, 14, 20, 4, 11, 16, 23, 6, 10, 15, 21};
+    //operations table
     private static int[] TABLE = new int[64];
-
+    
     static {
         for (int i = 0; i < 64; i++) {
             TABLE[i] = (int) (long) ((1L << 32) * Math.abs(Math.sin(i + 1)));
@@ -35,7 +36,7 @@ public class MD5 {
         int blocksCount = ((inputLength + 8) >>> 6) + 1;
         int total = blocksCount << 6;
         
-        //insert padding for correct alignment
+        //insert padding for correct alignment(divisible by 512)
         byte[] paddingBytes = new byte[total - inputLength];
         paddingBytes[0] = (byte) 0x80;
         long bitsLength = (long) inputLength << 3;
