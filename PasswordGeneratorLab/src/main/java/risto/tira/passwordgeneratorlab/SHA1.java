@@ -8,7 +8,7 @@ import javax.xml.bind.DatatypeConverter;
  * @author rsutinen
  */
 public class SHA1 {
-    private String inputString;
+    private final String inputString;
     
     public SHA1(String inputString) {
         this.inputString = inputString;

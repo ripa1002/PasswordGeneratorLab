@@ -5,18 +5,18 @@ package risto.tira.passwordgeneratorlab;
  * @author rsutinen
  */
 public class MD5 {
-    private byte[] inputString;
+    private final byte[] inputString;
     
     //variables initialized(32-bit words)
-    private static int AINIT = 0x67452301;
-    private static int BINIT = (int) 0xEFCDAB89L;
-    private static int CINIT = (int) 0x98BADCFEL;
-    private static int DINIT = 0x10325476;
+    private static final int AINIT = 0x67452301;
+    private static final int BINIT = (int) 0xEFCDAB89L;
+    private static final int CINIT = (int) 0x98BADCFEL;
+    private static final int DINIT = 0x10325476;
     
     //blocks table
-    private static int[] SHIFT = {7, 12, 17, 22, 5, 9, 14, 20, 4, 11, 16, 23, 6, 10, 15, 21};
+    private static final int[] SHIFT = {7, 12, 17, 22, 5, 9, 14, 20, 4, 11, 16, 23, 6, 10, 15, 21};
     //operations table
-    private static int[] TABLE = new int[64];
+    private static final int[] TABLE = new int[64];
     
     static {
         for (int i = 0; i < 64; i++) {

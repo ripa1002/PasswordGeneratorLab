@@ -6,7 +6,7 @@ import java.util.Base64;
  * @author rsutinen
  */
 public class Base64alg {
-    private String inputString;
+    private final String inputString;
 
     public Base64alg(String inputString) {
         this.inputString = inputString;
