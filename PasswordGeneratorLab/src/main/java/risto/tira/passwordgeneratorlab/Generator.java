@@ -5,6 +5,7 @@ import java.security.NoSuchAlgorithmException;
  * This is the main class of this program. The algorithm classes are used from here.
  * @author rsutinen
  */
+
 public class Generator {
     
     public static void main(String[] args) throws NoSuchAlgorithmException {

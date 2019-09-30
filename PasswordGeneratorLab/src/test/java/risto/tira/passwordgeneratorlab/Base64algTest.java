@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class Base64algTest {
     Base64alg testBase64algEncode;
+    
     Base64alg testBase64algDecode;
     
     @Before

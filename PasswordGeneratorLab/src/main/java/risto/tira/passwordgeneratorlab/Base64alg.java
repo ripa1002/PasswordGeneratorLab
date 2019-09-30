@@ -5,6 +5,7 @@ import java.util.Base64;
  * Class that handles the Base64 algorithm.
  * @author rsutinen
  */
+
 public class Base64alg {
     private final String inputString;
 

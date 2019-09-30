@@ -7,6 +7,7 @@ import javax.xml.bind.DatatypeConverter;
  * Class that handles the SHA1 algorithm.
  * @author rsutinen
  */
+
 public class SHA1 {
     private final String inputString;
     

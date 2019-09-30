@@ -9,12 +9,16 @@ public class MD5 {
     
     //variables initialized(32-bit words)
     private static final int AINIT = 0x67452301;
+    
     private static final int BINIT = (int) 0xEFCDAB89L;
+    
     private static final int CINIT = (int) 0x98BADCFEL;
+    
     private static final int DINIT = 0x10325476;
     
     //blocks table
     private static final int[] SHIFT = {7, 12, 17, 22, 5, 9, 14, 20, 4, 11, 16, 23, 6, 10, 15, 21};
+    
     //operations table
     private static final int[] TABLE = new int[64];
     
