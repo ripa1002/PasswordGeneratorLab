@@ -23,15 +23,5 @@ public class Generator {
         System.out.println(encodedHash.encode());
         //Printing encoded SHA1 hash
         System.out.println(encodedHash2.encode());
-        
-        /*
-        //Printing decoded Base64 encoded MD5 hash
-        Base64alg decodedHash = new Base64alg(encodedHash.encode());
-        System.out.println(decodedHash.decode());
-        
-        //Printing decoded Base64 encoded SHA1 hash
-        Base64alg decodedHash2 = new Base64alg(encodedHash2.encode());
-        System.out.println(decodedHash2.decode());
-        */
     }
 }
