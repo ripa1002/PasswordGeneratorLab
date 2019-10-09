@@ -1,6 +1,5 @@
 package risto.tira.passwordgeneratorlab;
 
-import java.security.NoSuchAlgorithmException;
 /**
  * This is the main class of this program. The algorithm classes are used from here.
  * @author rsutinen
@@ -8,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class Generator {
     
-    public static void main(String[] args) throws NoSuchAlgorithmException {
+    public static void main(String[] args) {
         String saltString = "salasana";
         String mac = "01-23-45-67-89-AB";
         String hashable = saltString + mac;

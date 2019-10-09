@@ -8,15 +8,15 @@ public class SHA1 {
     private final byte[] inputString;
     
     //variables initialized
-    private static final int AINIT = 1732584193;
+    private static final int AINIT = 0x67452301;
     
-    private static final int BINIT = -271733879;
+    private static final int BINIT = (int) 0xEFCDAB89;
     
-    private static final int CINIT = -1732584194;
+    private static final int CINIT = (int) 0x98BADCFE;
     
-    private static final int DINIT = 271733878;
+    private static final int DINIT = 0x10325476;
     
-    private static final int EINIT = -1009589776;
+    private static final int EINIT = (int) 0xC3D2E1F0;
 
     //Constructor to read inputString as byte array
     public SHA1(String inputString) {
