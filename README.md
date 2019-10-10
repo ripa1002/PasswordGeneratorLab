@@ -22,4 +22,6 @@ This program generates MD5/SHA-1 hash (Base64 encoded) from input string.
 
 [Week 5](documentation/weeklyreport5.md)
 
+[Week 6](documentation/weeklyreport6.md)
+
 
