@@ -1,4 +1,4 @@
-# Password generator
+# Password Generator
 
 This program generates MD5/SHA-1 hash (Base64 encoded) from input string.
 
@@ -10,7 +10,7 @@ This program generates MD5/SHA-1 hash (Base64 encoded) from input string.
 
 [Testing document](documentation/testing-document.md)
 
-## Week Reports
+## Week reports
 
 [Week 1](documentation/weeklyreport1.md)
 
