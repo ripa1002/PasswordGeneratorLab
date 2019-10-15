@@ -6,16 +6,52 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class SHA1Test {
-    SHA1 testSHA1;
+    SHA1 testSHA1a;
+    
+    SHA1 testSHA1b;
+    
+    SHA1 testSHA1c;
+    
+    SHA1 testSHA1d;
+    
+    SHA1 testSHA1e;
     
     @Before
     public void setUp() {
-        testSHA1 = new SHA1("salasana");
+        testSHA1a = new SHA1("salasana");
+        testSHA1b = new SHA1("");
+        testSHA1c = new SHA1("llhjaaaaagvygavgyasvyuasdgyascyghilas");
+        testSHA1d = new SHA1("12-12-12-12-12-12");
+        testSHA1e = new SHA1("uyasdtftgsdtgsdfgyuasdfgysdfagyuasdfyusdgyafgysdfgyuasdfgyfasdgyusdfyugysdafgyuasdftasdtfsdtfdsfghsdfghsdfyyusdafgyuasdfgyusdfgyuygsdf");
     }
     
     @Test
     public void returnCorrectHash() throws NoSuchAlgorithmException {
         final String correctHash = "C7E6477ECEF29604380F3185E205C3CC4EF565F3";
-        Assert.assertEquals(correctHash, testSHA1.hash());
+        Assert.assertEquals(correctHash, testSHA1a.hash());
+    }
+    
+    @Test
+    public void returnCorrectEmptyHash() throws NoSuchAlgorithmException {
+        final String correctHash = "DA39A3EE5E6B4B0D3255BFEF95601890AFD80709";
+        Assert.assertEquals(correctHash, testSHA1b.hash());
+    }
+    
+    @Test
+    public void returnCorrectHash2() throws NoSuchAlgorithmException {
+        final String correctHash = "C4E086917DAEC9C8310C1833FDF853799C06114F";
+        Assert.assertEquals(correctHash, testSHA1c.hash());
+    }
+    
+    @Test
+    public void returnCorrectHash3() throws NoSuchAlgorithmException {
+        final String correctHash = "E8BD5C7C24B9F05017B03DE0A82C364890989F1F";
+        Assert.assertEquals(correctHash, testSHA1d.hash());
+    }
+    
+    @Test
+    public void returnCorrectHash4() throws NoSuchAlgorithmException {
+        final String correctHash = "97F16E6B3B973A2B18F49123D71B4CEBF99CD02D";
+        Assert.assertEquals(correctHash, testSHA1e.hash());
     }
 }
