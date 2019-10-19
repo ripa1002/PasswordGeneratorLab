@@ -1,5 +1,5 @@
 ﻿
-##Password Generator Specification Document
+## Password Generator Specification Document
 
 For this lab course I’m going to make password generator program.
 
