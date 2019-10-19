@@ -5,6 +5,7 @@ This program generates MD5 and SHA-1 hash (Base64 encoded) from user provided MA
 ## User instructions
 
 With terminal, go inside the documentation/executable folder in this project's root. Type **java -jar PasswordGeneratorLab-1.0-SNAPSHOT.jar** and the program runs at your terminal window.
+Program asks user to provide MAC-address. There's a regular expression that checks if the user input is valid address. If it is, program prints Base64 encoded MD5 and SHA-1 hashes. If user input is not valid address, program asks user to provide address again.
 
 ## Documentation
 
