@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class MD5Test {
+    private static final int CALC = 1000000;
+    
     MD5 testMD5a;
     
     MD5 testMD5b;
@@ -77,14 +79,14 @@ public class MD5Test {
     
     @Test
     public void testPerformance() throws NoSuchAlgorithmException {
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < CALC; i++) {
             testMD5d.hash();
         }
     }
     
     @Test
     public void testPerformance2() throws NoSuchAlgorithmException {
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < CALC; i++) {
             testMD5f.hash();
         }
     }

@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class SHA1Test {
+    private static final int CALC = 1000000;
+    
     SHA1 testSHA1a;
     
     SHA1 testSHA1b;
@@ -77,14 +79,14 @@ public class SHA1Test {
     
     @Test
     public void testPerformance() throws NoSuchAlgorithmException {
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < CALC; i++) {
             testSHA1d.hash();
         }
     }
     
     @Test
     public void testPerformance2() throws NoSuchAlgorithmException {
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < CALC; i++) {
             testSHA1f.hash();
         }
     }
