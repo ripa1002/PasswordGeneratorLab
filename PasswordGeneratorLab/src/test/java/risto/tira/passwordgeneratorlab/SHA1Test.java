@@ -16,6 +16,8 @@ public class SHA1Test {
     
     SHA1 testSHA1e;
     
+    SHA1 testSHA1f;
+    
     @Before
     public void setUp() {
         testSHA1a = new SHA1("salasana");
@@ -23,6 +25,24 @@ public class SHA1Test {
         testSHA1c = new SHA1("llhjaaaaagvygavgyasvyuasdgyascyghilas");
         testSHA1d = new SHA1("12-12-12-12-12-12");
         testSHA1e = new SHA1("uyasdtftgsdtgsdfgyuasdfgysdfagyuasdfyusdgyafgysdfgyuasdfgyfasdgyusdfyugysdafgyuasdftasdtfsdtfdsfghsdfghsdfyyusdafgyuasdfgyusdfgyuygsdf");
+        //2412 chars
+        testSHA1f = new SHA1("fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386"
+                + "fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhu"
+                + "sdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDF"
+                + "GFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455"
+                + "234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf"
+                + "-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgd"
+                + "dfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdg"
+                + "dsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG"
+                + "-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dg"
+                + "dfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfu"
+                + "ghdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsd"
+                + "fughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduis"
+                + "uisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduif"
+                + "iudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfg"
+                + "hdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfd"
+                + "ksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386f"
+                + "hukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386");
     }
     
     @Test
@@ -53,5 +73,19 @@ public class SHA1Test {
     public void returnCorrectHash4() throws NoSuchAlgorithmException {
         final String correctHash = "97F16E6B3B973A2B18F49123D71B4CEBF99CD02D";
         Assert.assertEquals(correctHash, testSHA1e.hash());
+    }
+    
+    @Test
+    public void testPerformance() throws NoSuchAlgorithmException {
+        for (int i = 0; i < 1000000; i++) {
+            testSHA1d.hash();
+        }
+    }
+    
+    @Test
+    public void testPerformance2() throws NoSuchAlgorithmException {
+        for (int i = 0; i < 1000000; i++) {
+            testSHA1f.hash();
+        }
     }
 }

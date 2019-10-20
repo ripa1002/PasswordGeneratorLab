@@ -16,6 +16,8 @@ public class MD5Test {
     
     MD5 testMD5e;
     
+    MD5 testMD5f;
+    
     @Before
     public void setUp() {
         testMD5a = new MD5("salasana");
@@ -23,6 +25,24 @@ public class MD5Test {
         testMD5c = new MD5("llhjaaaaagvygavgyasvyuasdgyascyghilas");
         testMD5d = new MD5("12-12-12-12-12-12");
         testMD5e = new MD5("uyasdtftgsdtgsdfgyuasdfgysdfagyuasdfyusdgyafgysdfgyuasdfgyfasdgyusdfyugysdafgyuasdftasdtfsdtfdsfghsdfghsdfyyusdafgyuasdfgyusdfgyuygsdf");
+        //2412 chars
+        testMD5f = new MD5("fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386"
+                + "fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhu"
+                + "sdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDF"
+                + "GFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455"
+                + "234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf"
+                + "-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgd"
+                + "dfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdg"
+                + "dsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG"
+                + "-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dg"
+                + "dfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfu"
+                + "ghdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsd"
+                + "fughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduis"
+                + "uisgsduifiudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduif"
+                + "iudfgjdfghdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfg"
+                + "hdfjdjkfdksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfd"
+                + "ksSD5386fhukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386f"
+                + "hukasfhusdSDFDFDFGFS453455234-fsdaf-3453-fgddfgdfgsdgdsSDFGDFG-456456dgdfggdsdfughdfughsdfughsduisuisgsduifiudfgjdfghdfjdjkfdksSD5386");
     }
     
     @Test
@@ -53,5 +73,19 @@ public class MD5Test {
     public void returnCorrectHash4() throws NoSuchAlgorithmException {
         final String correctHash = "13D998162560FA33E5CB2ACD6492303D";
         Assert.assertEquals(correctHash, testMD5e.hash());
+    }
+    
+    @Test
+    public void testPerformance() throws NoSuchAlgorithmException {
+        for (int i = 0; i < 1000000; i++) {
+            testMD5d.hash();
+        }
+    }
+    
+    @Test
+    public void testPerformance2() throws NoSuchAlgorithmException {
+        for (int i = 0; i < 1000000; i++) {
+            testMD5f.hash();
+        }
     }
 }
