@@ -11,7 +11,7 @@ There is three different test classes, one for each algorithm class. For MD5 and
 ## Comparative tests
 
 I tested execution speed of hash()-function in MD5 and SHA-1 classes. Two different length input strings were used; short input is 17 characters and long is 2412 characters. Both inputs are hashed 1 million times with both algos.
-These result values represent average of 3 test runs.
+These result values represent average of 3 test runs. Test runs of library implementations are run with earlier version of this project [find it here](https://github.com/ripa1002/PasswordGeneratorLab/tree/0ab8897b016c0d6ca183e9d20202d98b2672dc3d).
 
 **Results**
 
@@ -21,5 +21,7 @@ These result values represent average of 3 test runs.
 - Hashing long input 1 million times took 26.944 seconds with MD5 and 29.467 seconds with SHA-1.
 
 We see that with short input MD5 is about 5.7 % slower than SHA-1 and with long input MD5 is about 8.6 % faster than SHA-1.
+
+Library implementations are about 10 times faster in the case of short input string and little less than 3 faster in the case of long input string.
 
 
